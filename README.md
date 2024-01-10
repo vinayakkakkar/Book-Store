@@ -55,8 +55,5 @@ The Book Store project is a web application that allows users to manage and brow
 4. Add new books by clicking on the "New Book" link.
 5. Edit or delete books by clicking on the corresponding links.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-```
 
