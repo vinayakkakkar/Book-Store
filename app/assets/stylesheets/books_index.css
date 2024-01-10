@@ -1,0 +1,36 @@
+.books-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book {
+ flex-grow: 1;
+ flex-basis: 200;
+ margin: 20px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.new-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}

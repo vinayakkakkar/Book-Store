@@ -1,0 +1,9 @@
+<%= stylesheet_link_tag 'books_form', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="book-form">
+  <h1>Edit Book</h1>
+
+  <%= render 'form', book: @book %>
+
+  <%= link_to 'Back', books_path, class: 'btn back-btn' %>
+</div>

@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag 'books_show', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class="book-show">
+  <div class="cover-image">
+  <% if @book.cover_image.attached? %>
+    <%= link_to image_tag(@book.cover_image, style:"width:150px; height150px"), @book.cover_image %>
+  <% else %>
+    <%= link_to image_tag('default_cover_image.png', style: "width:100px; height:150px;"), @book %>
+  <% end %>
+  </div>
+  <h1 style="margin-left: 50px;"><%= @book.title %></h1>
+
+  <div class="book-details">
+    <p><strong>Author:</strong> <%= @book.author %></p>
+    <p><strong>Genre:</strong> <%= @book.genre %></p>
+    <p><strong>Description:</strong> <%= @book.description %></p>
+  </div>
+
+
+  <%= link_to 'Back', books_path, class: 'btn back-btn' %>
+
+  <% if user_owns_book?(@book) %>
+    <div class="book-actions">
+      <%= link_to 'Edit', edit_book_path(@book), class: 'btn edit-btn' %>
+      <%= link_to 'Delete', @book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete-btn' %>
+    </div>
+  <% end %>
+</div>

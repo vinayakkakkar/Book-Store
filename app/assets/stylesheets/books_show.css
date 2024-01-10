@@ -1,0 +1,49 @@
+.book-show {
+  text-align: left;
+  max-width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.book-details {
+  margin-left: 50px;
+}
+
+.cover-image {
+  display: block;
+  margin-left: 20px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}

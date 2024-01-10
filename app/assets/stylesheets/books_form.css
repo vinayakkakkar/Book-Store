@@ -1,0 +1,51 @@
+.book-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn,
+.create-btn {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.create-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #bbb;
+}
+
+.create-btn:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag 'books_index', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<h1>Books</h1>
+
+<% if @books.any? %>
+  <div class="books-container">
+    <% @books.each do |book| %>
+      <div class="book">
+        <% if book.cover_image.attached? %>
+        <%= link_to image_tag(book.cover_image, style: "width:100px; height:150px;"), book.cover_image %>
+        <% else %>
+          <%= link_to image_tag('default_cover_image.png', style: "width:100px; height:150px;"), book %>
+        <% end %>
+        <h3><%= link_to book.title, book %></h3>
+        <% if user_owns_book?(book) %>
+          <%= link_to 'Edit', edit_book_path(book), class: 'btn edit-btn' %>
+          <%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn delete-btn' %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>No books available.</p>
+<% end %>
+
+<%= link_to 'New Book', new_book_path, class: 'btn new-btn' %>
